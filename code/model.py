@@ -16,9 +16,9 @@ accur_test = accuracy_score(y_testt, y_cl_test_pred)
 
 #Testing custom input 
 
-new_email_vec = vec.transform(new_email)
+#new_email_vec = vec.transform(new_email)
 
-prediction = cl.predict(new_email_vec)[0]
+#prediction = cl.predict(new_email_vec)[0]
 
 #print(prediction)
 
