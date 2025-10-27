@@ -45,6 +45,11 @@ main {
 
 
 
+#email_input{
+
+    resize:none;
+}
+
 /* footer items */
 
 footer{
