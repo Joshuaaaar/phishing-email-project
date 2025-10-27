@@ -11,6 +11,12 @@
 }
 
 
+.logo_kinda {
+
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+
+}
+
 .sections{
     display:flex;
     gap:30px;
@@ -23,6 +29,16 @@ a{
     color:black;
     font-weight:bold;
 }
+
+/* main items */
+
+.about_part{
+    
+    text-align:center;
+
+}
+
+
 
 /* footer items */
 
