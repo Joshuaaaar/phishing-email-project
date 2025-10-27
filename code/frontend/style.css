@@ -43,11 +43,30 @@ main {
 
 }
 
+#ml_model{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap:30px;
+}
 
 
 #email_input{
 
+    height:400px;
+    width:400px;
     resize:none;
+
+}
+
+/* Contact me styles */
+
+#contact_me {
+
+    text-align: center;
+
 }
 
 /* footer items */
