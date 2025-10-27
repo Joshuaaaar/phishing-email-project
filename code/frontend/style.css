@@ -32,8 +32,13 @@ a{
 
 /* main items */
 
+main {
+
+    margin-top:100px;
+
+}
 .about_part{
-    
+
     text-align:center;
 
 }
