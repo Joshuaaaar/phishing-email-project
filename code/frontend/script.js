@@ -1,12 +1,20 @@
 // script.js
+
+// getting elements from stuff
 const btn = document.getElementById("check_btn");
 const textarea = document.getElementById("email_input");
 const result = document.getElementById("result");
+
+
 
 btn.addEventListener("click", async () => {
   const text = textarea.value.trim();
   if (!text) {
     result.textContent = "Please paste an email first.";
+    return;
+  }
+  if (text.length < 10) {
+    result.textContent = "Your email is too short "
     return;
   }
 
@@ -32,7 +40,7 @@ btn.addEventListener("click", async () => {
 
     result.textContent = `Prediction: ${data.label}${confidence}`;
   } catch (e) {
-    result.textContent = "Could not reach the server.";
+    result.textContent = "Could not connect to the ML model.";
     console.error(e);
   }
 });
