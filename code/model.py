@@ -2,8 +2,14 @@ from dataSet import x_train_vec , x_test_vec, y_testt , y_train , vec
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_auc_score, log_loss
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV , StratifiedKFold
+from sklearn.metrics import f1_score, make_scorer
 import joblib
+
+
+
+f1_phish = make_scorer(f1_score, pos_label="Phishing Email")
+cv = cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 
 
@@ -24,7 +30,7 @@ param_grid = {
 }
 
 grid = GridSearchCV(
-    LogisticRegression(), param_grid, scoring='f1', cv=5, n_jobs=-1,verbose=0
+    LogisticRegression(), param_grid, scoring=f1_phish, cv=cv, n_jobs=-1,verbose=0
 )
 
 grid.fit(x_train_vec,y_train)
@@ -39,8 +45,8 @@ accur_test = accuracy_score(y_testt, y_cl_test_pred)
 
 # joblib
 
-joblib.dump(cl, "phishing_model.joblib")
-joblib.dump(vec, "vectorized.joblib")
+#joblib.dump(better_cl, "phishing_model.joblib")
+#joblib.dump(vec, "vectorized.joblib")
 
 #Testing custom input 
 
