@@ -141,14 +141,9 @@ Restart the Flask server to use the new model
 - Add UI confidence visualization
 - Support batch email classification
 
-## Demo
-
-A demo link is included in the repository under
-
-link to project demo.txt
 
 ## Author
 
 Joshua Ramnauth  
-Machine Learning and Software Engineering  
+Computer Science and Statistics
 University of Toronto
