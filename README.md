@@ -8,7 +8,7 @@ A machine learning powered web application that detects phishing emails using Na
 This project classifies emails as Phishing Email or Safe Email using TF IDF text features and a supervised Logistic Regression model. It is implemented as an end to end machine learning pipeline including data preprocessing model training model persistence API deployment and frontend integration.
 
 ## See it working
-
+https://youtu.be/olbYwNWHw4s?si=v1JdpRukWJ4FhIkt
 ## Key Highlights
 
 - Trained on a dataset of 15K+ labeled emails
