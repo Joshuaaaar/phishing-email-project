@@ -17,16 +17,10 @@ cv = cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 #cl.fit(x_train_vec,y_train)
 
 param_grid = {
-    
-    "C": [0.1,0.5,1,2,5,10],
-    
-    "penalty":["l1","l2"],
-    
-    "class_weight":[None,  "balanced"],
-    
-    "solver":["liblinear"],
-    
-    "max_iter":[2000],
+    "C": [0.1, 0.5, 1, 2, 5, 10],
+    "penalty": ["l1", "l2"],
+    "solver": ["liblinear"],
+    "max_iter": [2000],
 }
 
 grid = GridSearchCV(
@@ -58,7 +52,12 @@ accur_test = accuracy_score(y_testt, y_cl_test_pred)
 
 #print(accur_test)
 
-print(classification_report(y_testt,y_cl_test_pred))
+#print(classification_report(y_testt,y_cl_test_pred))
 
 
-print(confusion_matrix(y_testt,y_cl_test_pred))
+#print(confusion_matrix(y_testt,y_cl_test_pred))
+print("Training")
+print(classification_report(y_train, better_cl.predict(x_train_vec)))
+print("************************************************************")
+print("Testing")
+print(classification_report(y_testt, better_cl.predict(x_test_vec)))

@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-df = pd.read_csv("code/Phishing_Email.csv")
+df = pd.read_csv("Phishing_Email.csv")
 
 # Getting X data 
 

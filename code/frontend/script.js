@@ -37,8 +37,10 @@ btn.addEventListener("click", async () => {
     const confidence = typeof data.confidence === "number"
       ? ` (Confidence: ${(data.confidence * 100).toFixed(2)}%)`
       : "";
+    result.textContent = `Prediction: ${data.label}`;
 
-    result.textContent = `Prediction: ${data.label}${confidence}`;
+
+  //  result.textContent = `Prediction: ${data.label}`;
   } catch (e) {
     result.textContent = "Could not connect to the ML model.";
     console.error(e);
