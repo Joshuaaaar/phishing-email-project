@@ -2,9 +2,12 @@
 
 A machine learning powered web application that detects phishing emails using Natural Language Processing and Logistic Regression. The system exposes a Flask API for real time predictions and includes a simple JavaScript frontend for user interaction.
 
+
 ## Overview
 
 This project classifies emails as Phishing Email or Safe Email using TF IDF text features and a supervised Logistic Regression model. It is implemented as an end to end machine learning pipeline including data preprocessing model training model persistence API deployment and frontend integration.
+
+## See it working
 
 ## Key Highlights
 
